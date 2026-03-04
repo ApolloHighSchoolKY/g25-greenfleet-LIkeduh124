@@ -3,7 +3,14 @@ public class ElectricCar extends Vehicle {
 
     public ElectricCar(String model) {
         // TODO: Use super() to set the model
+        super(model);
         // TODO: Set batteryPercent to 100.0
+        batteryPercent = 100.0;
+    }
+
+    public double getBattery()
+    {
+        return batteryPercent;
     }
 
     /**
@@ -12,7 +19,10 @@ public class ElectricCar extends Vehicle {
     @Override
     public void drive(int distance) {
         // TODO: Call super.drive() 
+        super.drive(distance);
         // TODO: Calculate battery loss
+        battery -= distance/5;
+        
     }
 
     public void charge() {
